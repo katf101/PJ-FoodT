@@ -31,69 +31,67 @@ const AppLayout = ({ children }) => {
   return (
     <>
       <Header>
-        <MainDiv>
-          <ImageDiv>
-            <Image onClick={onIndexRoute} src={Logo} alt="로고" />
-          </ImageDiv>
-          <LeftMarginDiv />
-          <BusinessDiv>
-            <Link href="/business">
-              <Atag>Business</Atag>
-            </Link>
-          </BusinessDiv>
-          <ListDiv>
-            <Ul>
-              {isLoggedIn && (
-                <Li>
-                  <Link href="/map">
-                    <Atag>지도</Atag>
+        <ImageDiv>
+          <Image onClick={onIndexRoute} src={Logo} alt="로고" style={{width:'100%'}}/>
+        </ImageDiv>
+        <LeftMarginDiv />
+        <BusinessDiv>
+          <Link href="/business">
+            <Atag>Business</Atag>
+          </Link>
+        </BusinessDiv>
+        <ListDiv>
+          <Ul>
+            {isLoggedIn && (
+              <Li>
+                <Link href="/map">
+                  <Atag>지도</Atag>
+                </Link>
+              </Li>
+            )}
+            {isLoggedIn && (
+              <Li>
+                <Link href="/mypage/notification">
+                  <Atag>알림</Atag>
+                </Link>
+              </Li>
+            )}
+            {isLoggedIn && (
+              <Li>
+                <Link href="/mypage/profile">
+                  <Atag>내 정보</Atag>
+                </Link>
+              </Li>
+            )}
+            {!isLoggedIn && (
+              <Li log>
+                <LoginBack>
+                  <Link href="/signup">
+                    <Atag>로그인</Atag>
                   </Link>
-                </Li>
-              )}
-              {isLoggedIn && (
-                <Li>
-                  <Link href="/mypage/notification">
-                    <Atag>알림</Atag>
+                </LoginBack>
+              </Li>
+            )}
+            {!isLoggedIn && (
+              <Li log>
+                <LoginBack>
+                  <Link href="/">
+                    <Atag>회원가입</Atag>
                   </Link>
-                </Li>
-              )}
-              {isLoggedIn && (
-                <Li>
-                  <Link href="/mypage/profile">
-                    <Atag>내 정보</Atag>
-                  </Link>
-                </Li>
-              )}
-              {!isLoggedIn && (
-                <Li log>
-                  <LoginBack>
-                    <Link href="/signup">
-                      <Atag>로그인</Atag>
-                    </Link>
-                  </LoginBack>
-                </Li>
-              )}
-              {!isLoggedIn && (
-                <Li log>
-                  <LoginBack>
-                    <Link href="/">
-                      <Atag>회원가입</Atag>
-                    </Link>
-                  </LoginBack>
-                </Li>
-              )}
-              {isLoggedIn && (
-                <Li log>
-                  <LoginBack>
-                    <LogoutButton onClick={onLogoutHandelr}>
-                      로그아웃
-                    </LogoutButton>
-                  </LoginBack>
-                </Li>
-              )}
-            </Ul>
-          </ListDiv>
-        </MainDiv>
+                </LoginBack>
+              </Li>
+            )}
+            {isLoggedIn && (
+              <Li log>
+                <LoginBack>
+                  <LogoutButton onClick={onLogoutHandelr}>
+                    로그아웃
+                  </LogoutButton>
+                </LoginBack>
+              </Li>
+            )}
+          </Ul>
+        </ListDiv>
       </Header>
       <div>{children}</div>
     </>
@@ -138,7 +136,6 @@ const Atag = styled.a`
   font-size: 20px;
   line-height: 24px;
   color: #000000;
-
   cursor: pointer;
 `;
 
@@ -157,7 +154,7 @@ const ListDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 780px;
+  flex-grow: 1;
   height: 114px;
   /* background: #bbb6b6; */
   /* z-index: 76; */
@@ -165,48 +162,36 @@ const ListDiv = styled.div`
 
 // 사업 신청
 const BusinessDiv = styled.div`
-  display: flex;
-  /* flex-direction: column; */
-  align-items: center;
-  justify-content: center;
-  width: 250px;
-  height: 114px;
   /* background: #e98585; */
+  display: flex;
+  flex-grow: 1;
   z-index: 76;
 `;
 
 // 왼쪽 여백
 const LeftMarginDiv = styled.div`
-  width: 590px;
-  height: 114px;
   /* background: #8a4c4c; */
   z-index: 76;
 `;
 
 // 로고
 const ImageDiv = styled.div`
-  width: 300px;
-  height: 114px;
   /* background: #bbb6b6; */
-  z-index: 76;
-
-  cursor: pointer;
-`;
-
-const MainDiv = styled.div`
-  /* 헤더 센터 */
-  /* width: 1491px; */
-  height: 114px;
   display: flex;
-  /* background: #f2b5b5; */
-  z-index: 75;
+  flex-grow: 4;
+  z-index: 76;
+  cursor: pointer;
+  @media (min-width:320px) and (max-width:768px){
+    flex-grow: 2;
+  }
 `;
 
 const Header = styled.header`
-  flex-direction: column;
   display: flex;
-  justify-content: center;
-  /* width: 1920px; */
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%; 
   height: 164px;
   /* background: #d9d9d9; */
   z-index: 74;

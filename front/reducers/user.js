@@ -7,7 +7,7 @@ const dummyUser = {
 };
 
 export const initialState = {
-  isLoggedIn: true,
+  isLoggedIn: false,
 };
 
 export const LOG_IN = "LOG_IN";
