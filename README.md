@@ -1,13 +1,14 @@
 # Food-T
 
 ### 포폴 진행중입니다. 
-사용할 스택
-React
-Next.js
-styled-components
-Axios
-Redux-toolkit
-Mysql(sequelize)
+### 사용할 스택
+1. React
+2. Next.js
+3. styled-components
+4. Axios
+5. Redux-toolkit
+6. node.js / express
+7. Mysql(sequelize)
 
 완성후 ts로 리팩토링
 
