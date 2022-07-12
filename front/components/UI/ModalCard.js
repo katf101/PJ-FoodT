@@ -19,7 +19,7 @@ export default ModalCard;
 
 const Modal = styled.div`
   margin: auto;
-  margin-top: 50px;
+  margin-top: -150px;
   width: 648px;
   height: 618px;
 
@@ -34,8 +34,8 @@ const Modal = styled.div`
 
 const BackDrop = styled.div`
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 1920px;
+  height: 1020px;
   left: 0px;
   top: 0px;
 

@@ -8,9 +8,9 @@ const BlueBanner = ({ children }) => {
 export default BlueBanner;
 
 const MainDiv = styled.div`
-  /* position: absolute; */
-  width: 1920px;
-  height: 163px;
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
 
   background: #53b3ea;
   border-radius: 12px;

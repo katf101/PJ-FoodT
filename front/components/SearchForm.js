@@ -9,22 +9,22 @@ import BlueBanner from "./UI/BlueBanner";
 const SearchForm = () => {
   return (
     <BlueBanner>
-      <Main_TopDiv>Food T 에 오신걸 환영합니다.</Main_TopDiv>
+      <Main_TopDiv>
+        <Main_TopSpan>Food T 에 오신걸 환영합니다.</Main_TopSpan>
+      </Main_TopDiv>
       <Main_BottomDiv>
-        <BottomCenterDiv>
-          <ListDiv>
-            <Ul>
-              <Li>관악구</Li>
-              <Li>봉천동</Li>
-            </Ul>
-          </ListDiv>
-          <InputDiv>
-            <Input type="text"></Input>
-            <SearchButtonDiv>
-              <Image src={SearchButton} alt="버튼" />
-            </SearchButtonDiv>
-          </InputDiv>
-        </BottomCenterDiv>
+        <ListDiv>
+          <Ul>
+            <Li>관악구</Li>
+            <Li>봉천동</Li>
+          </Ul>
+        </ListDiv>
+        <InputDiv>
+          <Input type="text"></Input>
+          <SearchButtonDiv>
+            <Image src={SearchButton} alt="버튼" />
+          </SearchButtonDiv>
+        </InputDiv>
       </Main_BottomDiv>
     </BlueBanner>
   );
@@ -49,6 +49,9 @@ const Input = styled.input`
   /* vertical-align: middle; */
   /* display: inline-block; */
   /* text-align: start; */
+  @media (min-width:320px) and (max-width:768px){
+    width: 300px;
+  }
 `;
 
 const Li = styled.li`
@@ -63,16 +66,19 @@ const Ul = styled.ul`
 
 // Search Back
 const InputDiv = styled.div`
-  margin-top: 5px;
   width: 601px;
   height: 83px;
 
   display: flex;
   text-align: center; // 내부 요소 가운데 정렬
   justify-content: center;
-
+  flex-direction: row;
   background: #a1dbdf;
   border-radius: 15px;
+  @media (min-width:320px) and (max-width:768px){
+    width: 400px;
+    margin-left: 40px;
+  }
 `;
 
 // List div
@@ -83,47 +89,42 @@ const ListDiv = styled.div`
   align-items: center;
 
   /* background: #b16a6a; */
-`;
-
-// Bottom Center div
-const BottomCenterDiv = styled.div`
-  width: 1155px;
-  height: 93px;
-
-  display: flex;
-
-  /* background: #d9d9d9; */
+  @media (min-width:320px) and (max-width:768px){
+    display: none;
+  }
 `;
 
 // Main Bottom div
 const Main_BottomDiv = styled.div`
   display: flex;
   justify-content: center;
-  width: 1920px;
+  width: 100vw;
   height: 93px;
 
   /* background: #b54a4a; */
+  @media (min-width:320px) and (max-width:768px){
+    display: block;
+  }
 `;
 
 // Main Top div
 const Main_TopDiv = styled.div`
-  display: table-cell;
+  display: inline-block;
+  padding-top: 2vh;
   text-align: center;
   vertical-align: bottom;
-  /* justify-content: center; */
-  /* padding: 150px 0; */
-  width: 1920px;
+  width: 100vw;
   height: 70px;
 
   /* background: #eb8484; */
-
+`;
+const Main_TopSpan = styled.div`
   /* Food T 에 오신걸 환영합니다. */
-
-  /* font-family: "Inter";
+  font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 25px;
   line-height: 19px;
 
-  color: #183c72; */
+  color: #183c72; 
 `;
