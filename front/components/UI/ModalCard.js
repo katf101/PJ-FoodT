@@ -19,7 +19,7 @@ export default ModalCard;
 
 const Modal = styled.div`
   margin: auto;
-  margin-top: -150px;
+  margin-top: 50px;
   width: 648px;
   height: 618px;
 
