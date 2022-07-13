@@ -8,7 +8,8 @@
 4. Axios
 5. Redux-toolkit
 6. node.js / express
-7. Mysql(sequelize)
+7. MongoDB
+8. Sequelize
 
 완성후 ts로 리팩토링
 
