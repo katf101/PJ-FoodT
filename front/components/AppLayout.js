@@ -32,7 +32,12 @@ const AppLayout = ({ children }) => {
     <>
       <Header>
         <ImageDiv>
-          <Image onClick={onIndexRoute} src={Logo} alt="로고" style={{width:'100%'}}/>
+          <Image
+            onClick={onIndexRoute}
+            src={Logo}
+            alt="로고"
+            style={{ width: "100%" }}
+          />
         </ImageDiv>
         <LeftMarginDiv />
         <BusinessDiv>
@@ -181,7 +186,7 @@ const ImageDiv = styled.div`
   flex-grow: 4;
   z-index: 76;
   cursor: pointer;
-  @media (min-width:320px) and (max-width:768px){
+  @media (min-width: 320px) and (max-width: 768px) {
     flex-grow: 2;
   }
 `;
@@ -191,7 +196,7 @@ const Header = styled.header`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%; 
+  width: 100%;
   height: 164px;
   /* background: #d9d9d9; */
   z-index: 74;

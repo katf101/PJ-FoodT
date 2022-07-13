@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const SideMenu = ({ children }) => {
   return (
@@ -7,13 +8,27 @@ const SideMenu = ({ children }) => {
       <SideDiv>
         <ListDiv>
           <ul style={{ listStyle: "none", height: "500px" }}>
-            <LI>내 정보</LI>
-            <LI>알림</LI>
-            <LI>좋아요</LI>
-            <LI>내 푸드트럭</LI>
+            <LI>
+              <Link href="/mypage/profile">내 정보</Link>
+            </LI>
+            <LI>
+              <Link href="/mypage/notification">알림</Link>
+            </LI>
+            <LI>
+              <Link href="/mypage/like">좋아요</Link>
+            </LI>
+            <LI>
+              <Link href="/mypage/foodt">내 푸드트럭</Link>
+            </LI>
             <LI line>_____________</LI>
-            <LI details>구매내역</LI>
-            <LI>판매내역</LI>
+            <LI>
+              <Link details href="/mypage/buyList">
+                구매내역
+              </Link>
+            </LI>
+            <LI>
+              <Link href="/mypage/sellList">판매내역</Link>
+            </LI>
           </ul>
         </ListDiv>
       </SideDiv>
