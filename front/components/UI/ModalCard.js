@@ -18,6 +18,7 @@ const ModalCard = ({ children }) => {
 export default ModalCard;
 
 const Modal = styled.div`
+  /* 로그인 박스 백그라운드 */
   margin: auto;
   margin-top: -150px;
   width: 648px;
