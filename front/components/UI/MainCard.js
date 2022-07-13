@@ -6,6 +6,7 @@ const MainCard = () => {
       <MainDiv>
         <CardDiv>
           <ImgDiv>
+            <img src='/assets/foodtruck.jpeg' />
           </ImgDiv>
           <MainBrandNameDiv>
             <BrandNameDiv>
