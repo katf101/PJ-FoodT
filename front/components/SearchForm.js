@@ -44,12 +44,14 @@ const Input = styled.input`
   display: flex;
   width: 511px;
   height: 42px;
-
   margin: auto;
   /* vertical-align: middle; */
   /* display: inline-block; */
   /* text-align: start; */
   @media (min-width:320px) and (max-width:768px){
+    width: 300px;
+  }
+  @media (min-width:768px) and (max-width:992px){
     width: 300px;
   }
 `;
@@ -68,16 +70,26 @@ const Ul = styled.ul`
 const InputDiv = styled.div`
   width: 601px;
   height: 83px;
-
   display: flex;
   text-align: center; // 내부 요소 가운데 정렬
   justify-content: center;
   flex-direction: row;
   background: #a1dbdf;
   border-radius: 15px;
-  @media (min-width:320px) and (max-width:768px){
+  @media (min-width:320px) and (max-width:500px){
     width: 400px;
-    margin-left: 40px;
+    margin-left: 5%;
+  }
+  @media (min-width:501px) and (max-width:600px){
+    width: 400px;
+    margin-left: 8%;
+  }
+  @media (min-width:600px) and (max-width:768px){
+    width: 400px;
+    margin-left: 20%;
+  }
+  @media (min-width:768px) and (max-width:992px){
+    width: 400px;
   }
 `;
 

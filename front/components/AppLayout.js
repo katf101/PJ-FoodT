@@ -71,7 +71,7 @@ const AppLayout = ({ children }) => {
             {!isLoggedIn && (
               <Li log>
                 <LoginBack>
-                  <Link href="/signup">
+                  <Link href="/signin">
                     <Atag>로그인</Atag>
                   </Link>
                 </LoginBack>
@@ -80,7 +80,7 @@ const AppLayout = ({ children }) => {
             {!isLoggedIn && (
               <Li log>
                 <LoginBack>
-                  <Link href="/">
+                  <Link href="/signup">
                     <Atag>회원가입</Atag>
                   </Link>
                 </LoginBack>

@@ -9,6 +9,7 @@ import Image from "next/image";
 import SimpleLogin from "./SimpleLogin";
 import ModalCard from "../UI/ModalCard";
 import ModalLogo from "../assests/ModalLogo.png";
+import Link from "next/link";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -66,10 +67,18 @@ const LoginForm = () => {
             <FindDiv>
               <Ul>
                 <li>
-                  <FindLabel>비밀번호 찾기</FindLabel>
+                  <FindLabel>
+                    <Link href='/findpw'>
+                      비밀번호 찾기
+                    </Link>
+                  </FindLabel>
                 </li>
                 <li style={{ marginLeft: "20px", marginRight: "50px" }}>
-                  <FindLabel>회원가입</FindLabel>
+                  <FindLabel>
+                    <Link href='/signup'>
+                      회원가입
+                    </Link>
+                  </FindLabel>
                 </li>
               </Ul>
             </FindDiv>
@@ -82,26 +91,21 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
-
 const Ul = styled.ul`
   display: flex;
   justify-content: center;
   list-style: none;
 `;
-
 const FindLabel = styled.a`
   /* 비밀번호 찾기 */
   /* width: 82px;
   height: 16px; */
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
-
   text-decoration-line: underline;
-
   color: #868484;
 `;
 
@@ -109,6 +113,17 @@ const FindDiv = styled.div`
   width: 501px;
   height: 30px;
   /* background: #ffffff; */
+  @media (min-width:320px) and (max-width:500px){
+    width: 60vw;
+    margin-left: 10%;
+  }
+  @media (min-width:501px) and (max-width:768px){
+    width: 60vw;
+    margin-left: 10%;
+  }
+  @media (min-width:992px) and (max-width:1200px){
+    width: 45vw;
+  }
 `;
 
 const LoginButton = styled.button`
@@ -140,6 +155,17 @@ const LoginButtonDiv = styled.div`
   height: 82px;
 
   /* background: #b34d4d; */
+  @media (min-width:320px) and (max-width:500px){
+    width: 60vw;
+    margin-left: 10%;
+  }
+  @media (min-width:501px) and (max-width:768px){
+    width: 60vw;
+    margin-left: 10%;
+  }
+  @media (min-width:992px) and (max-width:1200px){
+    width: 45vw;
+  }
 `;
 
 const InputPw = styled.input`
@@ -148,12 +174,32 @@ const InputPw = styled.input`
   height: 40px;
 
   /* background: #ffffff; */
+  @media (min-width:320px) and (max-width:500px){
+    width: 60vw;
+  }
+  @media (min-width:501px) and (max-width:768px){
+    width: 60vw;
+    margin-left: 10%;
+  }
+  @media (min-width:992px) and (max-width:1200px){
+    width: 45vw;
+  }
 `;
 const InputEmail = styled.input`
   width: 500px;
   height: 40px;
 
   /* background: #ffffff; */
+  @media (min-width:320px) and (max-width:500px){
+    width: 60vw;
+  }
+  @media (min-width:501px) and (max-width:768px){
+    width: 60vw;
+    margin-left: 10%;
+  }
+  @media (min-width:992px) and (max-width:1200px){
+    width: 45vw;
+  }
 `;
 
 const InputDiv = styled.div`
@@ -161,12 +207,18 @@ const InputDiv = styled.div`
   width: 500px;
   height: 95px;
   /* background: #9f7676; */
+  @media (min-width:320px) and (max-width:500px){
+    padding-left: 10%;
+  }
 `;
 
 const HeaderDiv = styled.div`
   width: 500px;
   height: 121px;
   /* background: #de8e8e; */
+  @media (min-width:320px) and (max-width:768px){
+    width: 85vw;
+  }
 `;
 
 const MainDiv = styled.div`
@@ -177,6 +229,15 @@ const MainDiv = styled.div`
   /* background: #d9d9d9; */
 
   z-index: 80;
+  @media (min-width:320px) and (max-width:500px){
+    width: 100vw;
+  }
+  @media (min-width:501px) and (max-width:768px){
+    width: 80vw;
+  }
+  @media (min-width:992px) and (max-width:1200px){
+    width: 50vw;
+  }
 `;
 
 const LoginDiv = styled.div`
