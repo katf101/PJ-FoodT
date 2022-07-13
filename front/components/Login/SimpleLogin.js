@@ -53,4 +53,15 @@ const MainSimpleLoginDiv = styled.div`
   height: 24px;
 
   /* background: #fc9f9f; */
+  @media (min-width:320px) and (max-width:500px){
+    width: 60vw;
+    margin-left: 10%;
+  }
+  @media (min-width:501px) and (max-width:768px){
+    width: 60vw;
+    margin-left: 10%;
+  }
+  @media (min-width:992px) and (max-width:1200px){
+    width: 45vw;
+  }
 `;

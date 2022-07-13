@@ -1,52 +1,65 @@
 import React from 'react';
 import styled from "styled-components";
+import Image from "next/image";
+import FoodTruck from "../assests/foodtruck.jpeg";
 
 const MainCard = () => {
     return (
       <MainDiv>
         <CardDiv>
           <ImgDiv>
-            <img src='/assets/foodtruck.jpeg' />
+            <Image src={FoodTruck}/>
           </ImgDiv>
           <MainBrandNameDiv>
             <BrandNameDiv>
               <TitleDiv>아무말대잔치</TitleDiv>
               <StatusDiv>Open</StatusDiv>
             </BrandNameDiv>
-            <div>내용</div>
+            <BrandContentDiv>
+              내용
+            </BrandContentDiv>
           </MainBrandNameDiv>
         </CardDiv>
         <CardDiv>
           <ImgDiv>
+            <Image src={FoodTruck} />
           </ImgDiv>
           <MainBrandNameDiv>
             <BrandNameDiv>
               <TitleDiv>아무말대잔치</TitleDiv>
               <StatusDiv>Open</StatusDiv>
             </BrandNameDiv>
-            <div>내용</div>
+            <BrandContentDiv>
+              내용
+            </BrandContentDiv>
           </MainBrandNameDiv>
         </CardDiv>
         <CardDiv>
           <ImgDiv>
+            <Image src={FoodTruck} />
           </ImgDiv>
           <MainBrandNameDiv>
             <BrandNameDiv>
               <TitleDiv>아무말대잔치</TitleDiv>
               <StatusDiv>Open</StatusDiv>
             </BrandNameDiv>
-            <div>내용</div>
+            <BrandContentDiv>
+              내용
+            </BrandContentDiv>
           </MainBrandNameDiv>
         </CardDiv>
         <CardDiv>
           <ImgDiv>
+            <Image src={FoodTruck} />
           </ImgDiv>
           <MainBrandNameDiv>
             <BrandNameDiv>
               <TitleDiv>아무말대잔치</TitleDiv>
               <StatusDiv>Open</StatusDiv>
             </BrandNameDiv>
-            <div>내용</div>
+            <BrandContentDiv>
+              내용
+            </BrandContentDiv>
           </MainBrandNameDiv>
         </CardDiv>
       </MainDiv>
@@ -56,10 +69,10 @@ const MainCard = () => {
 
 export default MainCard;
 
-const MainDiv = styled.div`
+const MainDiv =  styled.div`
+  padding: 5%;
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
   @media (min-width:320px) and (max-width:768px){
     display: block
   }
@@ -85,10 +98,19 @@ const ImgDiv = styled.div`
   display: flex;
   flex-grow: 2;
   width: 15vw;
-  background: #222222;
+  min-width: 180px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   @media (min-width:320px) and (max-width:768px){
     width: 45vw;
+    min-width:100px;
+  }
+  @media (min-width:768px) and (max-width:992px){
+    width: 45vw;
+    min-width:100px;
+  }
+  @media (min-width:992px) and (max-width:1200px){
+    width: 45vw;
+    min-width:100px;
   }
 `;
 
@@ -99,12 +121,18 @@ const MainBrandNameDiv = styled.div`
 
 const BrandNameDiv = styled.div`
   display: flex;
-  width: 500px;
+  width: 25vw;
   height: 5vh;
-  border: 1px solid black;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  border-bottom: 1px solid black;
   @media (min-width:320px) and (max-width:768px){
     width: 55vw;
+  }
+  @media (min-width:768px) and (max-width:992px){
+    width: 20vw;
+  }
+  @media (min-width:992px) and (max-width:1200px){
+    width: 20vw;
   }
 `;
 
@@ -117,4 +145,6 @@ const StatusDiv = styled.div`
   width: 100px;
   margin-top: 10px;
 `;
-
+const BrandContentDiv = styled.div`
+  padding: 10px;
+`;
