@@ -8,7 +8,6 @@ import Image from "next/image";
 
 import ModalCard from "../UI/ModalCard";
 import ModalLogo from "../assests/ModalLogo.png";
-import Link from "next/link";
 
 const LoginForm = () => {
   const dispatch = useDispatch();

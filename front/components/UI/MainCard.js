@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import Image from "next/image";
 import FoodTruck from "../assests/foodtruck.jpeg";
+import Link from "next/link";
 
 const MainCard = () => {
     return (
@@ -12,7 +13,11 @@ const MainCard = () => {
           </ImgDiv>
           <MainBrandNameDiv>
             <BrandNameDiv>
-              <TitleDiv>아무말대잔치</TitleDiv>
+              <TitleDiv>
+                <Link href="/restaurant/menu">
+                  아무말대잔치
+                </Link>
+              </TitleDiv>
               <StatusDiv>Open</StatusDiv>
             </BrandNameDiv>
             <BrandContentDiv>
