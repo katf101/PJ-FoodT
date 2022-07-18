@@ -1,7 +1,0 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/mypage/profile": "pages/mypage/profile.js",
-  "/mypage/foodt": "pages/mypage/foodt.js"
-}
