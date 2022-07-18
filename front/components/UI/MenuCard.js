@@ -6,7 +6,16 @@ import FoodTruck from "../assests/foodtruck.jpeg";
 const MainCard = () => {
     return (
       <MainDiv>
-        <MainTitleDiv>봉천동 푸드트럭</MainTitleDiv>
+        <MainTitleDiv>
+          <div>⭐️</div>
+          <div>봉천동 푸드트럭</div>
+          <ReviewDiv>
+            <div>
+              리뷰
+            </div>
+          </ReviewDiv>
+          <CartDiv>장바구니</CartDiv>
+        </MainTitleDiv>
         <CardDiv>
           <ImgDiv>
             <Image src={FoodTruck}/>
@@ -64,19 +73,67 @@ const MainCard = () => {
 
 export default MainCard;
 
-const MainDiv =  styled.div`
+const MainDiv = styled.div`
   padding: 5%;
+  margin: 3%;
   display: block;
   flex-wrap: wrap;
+  background: #DEF3FD;
 `;
 
 const MainTitleDiv = styled.div`
-  
+  display: flex;
+  border: 1px solid black;
+  background: #FFF;
+  padding: 2%;
+  div {
+    &:nth-child(1) {
+      display: flex;
+      flex-grow: 1;
+    }
+    &:nth-child(2) {
+      display: flex;
+      flex-grow: 5;
+      margin-left: 23%;
+    }
+    &:nth-child(3) {
+      display: flex;
+      flex-grow: 1;
+    }
+    &:nth-child(4) {
+      display: flex;
+      flex-grow: 1;
+    }
+  }
 `;
-
+const ReviewDiv = styled.div`
+  display: flex;
+  cursor: pointer;
+  padding: 5px;
+  padding-left: 7%;
+  border: 1px solid black;
+  @media (min-width:320px) and (max-width:768px){
+    padding: 5px;
+  }
+  @media (min-width:768px) and (max-width:992px){
+    padding-left: 5%;
+  }
+`;
+const CartDiv = styled.div`
+  cursor: pointer;
+  padding: 5px;
+  padding-left: 7%;
+  border: 1px solid black;
+  @media (min-width:320px) and (max-width:768px){
+    padding: 5px;
+  }
+  @media (min-width:768px) and (max-width:992px){
+    padding-left: 5%;
+  }
+`;
 const CardDiv = styled.div`
   display: flex;
-  width: 45vw;
+  width: 70vw;
   height: 300px;
   margin: 0 auto;
   margin-top: 30px;
@@ -117,7 +174,7 @@ const MainBrandNameDiv = styled.div`
 
 const BrandNameDiv = styled.div`
   display: flex;
-  width: 25vw;
+  width: 45vw;
   height: 5vh;
   padding: 10px;
   border-bottom: 1px solid black;
@@ -125,10 +182,10 @@ const BrandNameDiv = styled.div`
     width: 55vw;
   }
   @media (min-width:768px) and (max-width:992px){
-    width: 20vw;
+    width: 45vw;
   }
   @media (min-width:992px) and (max-width:1200px){
-    width: 20vw;
+    width: 45vw;
   }
 `;
 
@@ -149,14 +206,18 @@ const BasketPlusDiv = styled.div`
   border: 1px solid black;
   @media (min-width:320px) and (max-width:500px){
     margin-left: 77%;
-    margin-top: 23%;
+    margin-top: 110px;
   }
   @media (min-width:501px) and (max-width:768px){
-    margin-left: 77%;
-    margin-top: 17%;
+    margin-left: 75%;
+    margin-top: 110px;
+  }
+  @media (min-width:769px) and (max-width:1199px){
+    margin-left: 66%;
+    margin-top: 260px;
   }
   @media (min-width:1200px){
-    margin-left: 43%;
-    margin-top: 15%;
+    margin-left: 66%;
+    margin-top: 260px;
   }
 `;
