@@ -8,7 +8,7 @@ const like = () => {
   return (
     <>
       <AppLayout />
-      <BlueBanner>여기는 알림</BlueBanner>
+      <BlueBanner>여기는 좋아요</BlueBanner>
       <SideMenu>
         <MainLikeDiv>
           <LikeDiv />

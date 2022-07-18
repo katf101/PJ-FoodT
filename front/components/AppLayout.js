@@ -40,13 +40,16 @@ const AppLayout = ({ children }) => {
           />
         </ImageDiv>
         <LeftMarginDiv />
-        <BusinessDiv>
-          <Link href="/business">
-            <Atag>Business</Atag>
-          </Link>
-        </BusinessDiv>
+
         <ListDiv>
           <Ul>
+            {isLoggedIn && (
+              <Li>
+                <Link href="/business">
+                  <Atag>Business</Atag>
+                </Link>
+              </Li>
+            )}
             {isLoggedIn && (
               <Li>
                 <Link href="/map">
@@ -166,12 +169,12 @@ const ListDiv = styled.div`
 `;
 
 // 사업 신청
-const BusinessDiv = styled.div`
-  /* background: #e98585; */
-  display: flex;
-  flex-grow: 1;
-  z-index: 76;
-`;
+// const BusinessDiv = styled.div`
+//   /* background: #e98585; */
+//   display: flex;
+//   flex-grow: 1;
+//   z-index: 76;
+// `;
 
 // 왼쪽 여백
 const LeftMarginDiv = styled.div`
