@@ -2,24 +2,15 @@ import React from 'react';
 import styled from "styled-components";
 import Image from "next/image";
 import FoodTruck from "../assests/foodtruck.jpeg";
-import Link from "next/link";
 
-const MainCard = () => {
+const Review = () => {
     return (
       <MainDiv>
         <MainTitleDiv>
           <div>⭐️</div>
           <div>봉천동 푸드트럭</div>
-          <ReviewDiv>
-          <Link href="/restaurant/review">
-              리뷰
-            </Link>
-          </ReviewDiv>
-          <CartDiv>
-            <Link href="/restaurant/basketlist">
-              장바구니
-            </Link>
-          </CartDiv>
+          <ReviewDiv>리뷰</ReviewDiv>
+          <WriteDiv>글쓰기</WriteDiv>
         </MainTitleDiv>
         <CardDiv>
           <ImgDiv>
@@ -27,56 +18,23 @@ const MainCard = () => {
           </ImgDiv>
           <MainBrandNameDiv>
             <BrandNameDiv>
-              <TitleDiv>메뉴명 : 목살 세트</TitleDiv>
+              <TitleDiv>Consumer1</TitleDiv>
+              <ResponseDiv>답글</ResponseDiv>
+              <DeclareDiv>신고</DeclareDiv>
+              <ModifyDiv>수정</ModifyDiv>
+              <DeleteDiv>삭제</DeleteDiv>
             </BrandNameDiv>
             <BrandContentDiv>
-              설명 : 아주 맛있습니다!<br/><br/>
-              가격 : 12,000
+              내용 : 목살 마시써요
             </BrandContentDiv>
+            <ReviewPlusDiv>▶️ 1개의 댓글 더보기</ReviewPlusDiv>
           </MainBrandNameDiv>
-          <BasketPlusDiv>
-            +
-          </BasketPlusDiv>
-        </CardDiv>
-        <CardDiv>
-          <ImgDiv>
-            <Image src={FoodTruck}/>
-          </ImgDiv>
-          <MainBrandNameDiv>
-            <BrandNameDiv>
-              <TitleDiv>메뉴명 : 목살 세트</TitleDiv>
-            </BrandNameDiv>
-            <BrandContentDiv>
-              설명 : 아주 맛있습니다!<br/><br/>
-              가격 : 12,000
-            </BrandContentDiv>
-          </MainBrandNameDiv>
-          <BasketPlusDiv>
-            +
-          </BasketPlusDiv>
-        </CardDiv>
-        <CardDiv>
-          <ImgDiv>
-            <Image src={FoodTruck}/>
-          </ImgDiv>
-          <MainBrandNameDiv>
-            <BrandNameDiv>
-              <TitleDiv>메뉴명 : 목살 세트</TitleDiv>
-            </BrandNameDiv>
-            <BrandContentDiv>
-              설명 : 아주 맛있습니다!<br/><br/>
-              가격 : 12,000
-            </BrandContentDiv>
-          </MainBrandNameDiv>
-          <BasketPlusDiv>
-            +
-          </BasketPlusDiv>
         </CardDiv>
       </MainDiv>
     );
 };
 
-export default MainCard;
+export default Review;
 
 const MainDiv = styled.div`
   padding: 5%;
@@ -125,7 +83,7 @@ const ReviewDiv = styled.div`
     padding-left: 5%;
   }
 `;
-const CartDiv = styled.div`
+const WriteDiv = styled.div`
   cursor: pointer;
   padding: 5px;
   padding-left: 7%;
@@ -180,6 +138,7 @@ const MainBrandNameDiv = styled.div`
 
 const BrandNameDiv = styled.div`
   display: flex;
+  align-items: center;
   width: 45vw;
   height: 5vh;
   padding: 10px;
@@ -193,37 +152,54 @@ const BrandNameDiv = styled.div`
   @media (min-width:992px) and (max-width:1200px){
     width: 45vw;
   }
+  div {
+    &:nth-child(1) {
+        display: flex;
+        flex-grow: 8;
+        margin-left: 5%;
+      }
+      &:nth-child(2) {
+        display: flex;
+        flex-grow: 1;
+      }
+      &:nth-child(3) {
+        display: flex;
+        flex-grow: 1;
+      }
+      &:nth-child(4) {
+        display: flex;
+        flex-grow: 1;
+      }
+      &:nth-child(5) {
+        display: flex;
+        flex-grow: 1;
+      }
+  }
 `;
 
 const TitleDiv = styled.div`
   width: 400px;
   margin-top: 10px;
 `;
+const ResponseDiv = styled.div`
 
+`;
+const DeclareDiv = styled.div`
+
+`;
+const ModifyDiv = styled.div`
+
+`;
+const DeleteDiv = styled.div`
+
+`;
 const BrandContentDiv = styled.div`
   padding: 10px;
+  margin: 2%;
+  width: 93%;
+  height: 130px;
+  background: #eee;
 `;
-
-const BasketPlusDiv = styled.div`
-  position: absolute;
-  margin-left: 77%;
-  margin-top: 22%;
-  padding: 5px;
-  border: 1px solid black;
-  @media (min-width:320px) and (max-width:500px){
-    margin-left: 77%;
-    margin-top: 110px;
-  }
-  @media (min-width:501px) and (max-width:768px){
-    margin-left: 75%;
-    margin-top: 110px;
-  }
-  @media (min-width:769px) and (max-width:1199px){
-    margin-left: 66%;
-    margin-top: 260px;
-  }
-  @media (min-width:1200px){
-    margin-left: 66%;
-    margin-top: 260px;
-  }
+const ReviewPlusDiv = styled.div`
+  margin-left: 5%;
 `;
