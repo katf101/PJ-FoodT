@@ -29,7 +29,6 @@ const profile = () => {
           </ProfileBottomDiv>
         </MainProfileDiv>
       </SideMenu>
-      {/* </AppLayout> */}
     </>
   );
 };

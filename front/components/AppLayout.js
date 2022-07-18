@@ -32,16 +32,24 @@ const AppLayout = ({ children }) => {
     <>
       <Header>
         <ImageDiv>
-          <Image onClick={onIndexRoute} src={Logo} alt="로고" style={{width:'100%'}}/>
+          <Image
+            onClick={onIndexRoute}
+            src={Logo}
+            alt="로고"
+            style={{ width: "100%" }}
+          />
         </ImageDiv>
         <LeftMarginDiv />
-        <BusinessDiv>
-          <Link href="/business">
-            <Atag>Business</Atag>
-          </Link>
-        </BusinessDiv>
+
         <ListDiv>
           <Ul>
+            {isLoggedIn && (
+              <Li>
+                <Link href="/business">
+                  <Atag>Business</Atag>
+                </Link>
+              </Li>
+            )}
             {isLoggedIn && (
               <Li>
                 <Link href="/map">
@@ -161,12 +169,12 @@ const ListDiv = styled.div`
 `;
 
 // 사업 신청
-const BusinessDiv = styled.div`
-  /* background: #e98585; */
-  display: flex;
-  flex-grow: 1;
-  z-index: 76;
-`;
+// const BusinessDiv = styled.div`
+//   /* background: #e98585; */
+//   display: flex;
+//   flex-grow: 1;
+//   z-index: 76;
+// `;
 
 // 왼쪽 여백
 const LeftMarginDiv = styled.div`
@@ -181,7 +189,7 @@ const ImageDiv = styled.div`
   flex-grow: 4;
   z-index: 76;
   cursor: pointer;
-  @media (min-width:320px) and (max-width:768px){
+  @media (min-width: 320px) and (max-width: 768px) {
     flex-grow: 2;
   }
 `;
@@ -191,7 +199,7 @@ const Header = styled.header`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%; 
+  width: 100%;
   height: 164px;
   /* background: #d9d9d9; */
   z-index: 74;
