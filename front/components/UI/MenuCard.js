@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import Image from "next/image";
 import FoodTruck from "../assests/foodtruck.jpeg";
+import Link from "next/link";
 
 const MainCard = () => {
     return (
@@ -9,12 +10,12 @@ const MainCard = () => {
         <MainTitleDiv>
           <div>⭐️</div>
           <div>봉천동 푸드트럭</div>
-          <ReviewDiv>
-            <div>
-              리뷰
-            </div>
-          </ReviewDiv>
-          <CartDiv>장바구니</CartDiv>
+          <ReviewDiv>리뷰</ReviewDiv>
+          <CartDiv>
+            <Link href="/restaurant/basketlist">
+              장바구니
+            </Link>
+          </CartDiv>
         </MainTitleDiv>
         <CardDiv>
           <ImgDiv>
@@ -83,6 +84,7 @@ const MainDiv = styled.div`
 
 const MainTitleDiv = styled.div`
   display: flex;
+  align-items: center;
   border: 1px solid black;
   background: #FFF;
   padding: 2%;
